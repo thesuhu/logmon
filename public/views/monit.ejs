@@ -1,0 +1,49 @@
+<%- include('partials/head') -%>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+</head>
+<body>
+   <%- include('partials/menu') -%> 
+<br>
+<div class="container">
+    <div class="d-flex flex-row bd-highlight mb-3">
+        <div class="dropdown">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="badge bg-secondary"> <%- dropdownListLength -%></span>
+            Select Log
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdownList">
+            <%- dropdownList -%>
+          </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+    <div id="wrapper"></div>
+</div>
+</div>
+
+<!-- view log file -->
+<div class="modal fade" id="viewlog" aria-hidden="true">
+  <div>
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title"></h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<%- include('partials/footer') -%>
+<script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+<script src="./js/monit.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+ <%- include('partials/head') -%> 
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <%- message %>
+      <div class="login-form bg-light mt-4 p-4">
+        <form action="/api/register" method="post" class="row g-3 needs-validation" novalidate>
+          <h6>Please create initial admin user.</h6>
+          <div class="col-md-12">
+            <label for="myusername" class="form-label">Username</label>
+            <input type="text" name="username" id="myusername" class="form-control" placeholder="Username" required>
+            <div class="invalid-feedback">
+              Please choose a username!
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="mypassword" class="form-label">Password</label>
+            <input type="password" name="password" id="mypassword" class="form-control" placeholder="Password" oninput="checkPasscode()" required>
+            <div class="invalid-feedback">
+              Password must be at least 8 characters!
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="mypassword2" class="form-label">Confirm password</label>
+            <input type="password" name="password2" id="mypassword2" class="form-control" placeholder="Confirm password" oninput="checkMatch()" required>
+            <div class="invalid-feedback">
+              Password does not match!
+            </div>          
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-warning">Create user</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="./js/register.js"></script>
+ <%- include('partials/footer') -%> 
+</body>
+</html>

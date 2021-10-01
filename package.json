@@ -1,0 +1,23 @@
+{
+  "name": "logmon",
+  "version": "1.0.0",
+  "description": "Simple monitoring for your log file",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "log",
+    "monitoring"
+  ],
+  "author": "thesuhu <thesuhu@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "moment-timezone": "^0.5.33",
+    "node-json-db": "^1.3.0",
+    "pbkdf2-password": "^1.2.1"
+  }
+}
