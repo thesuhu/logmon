@@ -1,4 +1,4 @@
-# writelog
+# logmon
 
 [![license](https://img.shields.io/github/license/thesuhu/logmon?style=flat-square)](https://github.com/thesuhu/logmon/blob/master/LICENSE)
 
@@ -12,6 +12,10 @@ cd logmon
 npm install
 npm start 
 ```
+
+# Usage
+
+Copy file `config/config-example.js` to `config/config.js` and then open the file and change the `datapath` according to where the log is located.
 
 ## License
 
